@@ -30,6 +30,7 @@ public class Titulo {
     public void setAnoDeLancamento(int anoDeLancamento) {
         this.anoDeLancamento = anoDeLancamento;
     }
+
     public int getDuracaoEmMinutos() {
         return duracaoEmMinutos;
     }

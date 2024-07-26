@@ -1,5 +1,6 @@
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
+import calculos.CalculadoraDeTempo;
 
 public class Principal {
     public static void main(String[] args) {
@@ -9,7 +10,7 @@ public class Principal {
        meuFilme.setAnoDeLancamento(2010);
        meuFilme.setDuracaoEmMinutos(180);
        System.out.println("Duração em Minutos: "+ meuFilme.getDuracaoEmMinutos());
-//       Quando eu chamar o método exibeFichaTecnica ele precisa exibir o que eu determinei
+//     Quando eu chamar o método exibeFichaTecnica ele precisa exibir o que eu determinei
        meuFilme.exibeFichaTecnica();
        meuFilme.avalia(8);
        meuFilme.avalia(10);
@@ -24,6 +25,13 @@ public class Principal {
        serie.setTemporadas(10);
        serie.setEpisodiosPorTemporada(10);
        serie.setMinutosPorEpisodio(50);
-       System.out.println("Duração para Maratonar Lost: "+ serie.getDuracaoEmMinutos());
+       System.out.println("Duração para Maratonar: "+ serie.getDuracaoEmMinutos());
+//*******************************************************************************************
+//       Polimorfismo
+       CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+       calculadora.inclui(meuFilme);
+       calculadora.inclui(serie);
+       System.out.println(calculadora.getTempoTotal());
+
     }
 }

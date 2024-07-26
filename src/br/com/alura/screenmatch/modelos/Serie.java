@@ -1,5 +1,5 @@
 package br.com.alura.screenmatch.modelos;
-
+//a classe Série vai herdar os atributos da classe titulo e só vamos acrescentar os atributos necessários para a Série
 public class Serie extends Titulo{
     private int temporadas;
     private boolean ativa;

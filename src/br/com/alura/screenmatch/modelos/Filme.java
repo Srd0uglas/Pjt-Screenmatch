@@ -1,6 +1,6 @@
 package br.com.alura.screenmatch.modelos;
 
-//A classe vai especificar tudo que o filme tem (características)
+//A classe vai TITULO especificar tudo que o filme tem (características)
 //extends filme tem tudo que o título tem
 public class Filme extends Titulo{
   private String diretor;
