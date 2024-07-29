@@ -1,6 +1,8 @@
+import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import calculos.CalculadoraDeTempo;
+import calculos.FiltroRecomendacao;
 
 public class Principal {
     public static void main(String[] args) {
@@ -32,6 +34,15 @@ public class Principal {
        calculadora.inclui(meuFilme);
        calculadora.inclui(serie);
        System.out.println(calculadora.getTempoTotal());
+//*******************************************************************************************
+//      método para saber se é um bom episódio ou filme
+       FiltroRecomendacao filtro = new FiltroRecomendacao();
+       filtro.filtra(meuFilme);
 
+       Episodio episodio = new Episodio();
+       episodio.setNumero(1);
+       episodio.setSerie(serie);
+       episodio.setTotalDeVisualizacoes(100);
+       filtro.filtra(episodio);
     }
 }
