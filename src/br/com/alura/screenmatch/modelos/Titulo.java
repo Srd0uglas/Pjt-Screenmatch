@@ -23,12 +23,20 @@ public class Titulo {
         this.nome = nome;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     public void setIncluidoNoPlano(boolean incluidoNoPlano) {
         this.incluidoNoPlano = incluidoNoPlano;
     }
 
     public void setAnoDeLancamento(int anoDeLancamento) {
         this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
     }
 
     public int getDuracaoEmMinutos() {
@@ -58,4 +66,6 @@ public class Titulo {
 //        return é para retornar um valor
         return somaDasAvaliacoes/totalDeAvaliacoes;
     }
+
+
 }

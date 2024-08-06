@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.modelos.Serie;
 import calculos.CalculadoraDeTempo;
 import calculos.FiltroRecomendacao;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
 //  Instância da Classe br.com.alura.screenmatch.modelos.Filme
@@ -42,7 +44,34 @@ public class Principal {
        Episodio episodio = new Episodio();
        episodio.setNumero(1);
        episodio.setSerie(serie);
-       episodio.setTotalDeVisualizacoes(100);
+       episodio.setTotalDeVisualizacoes(300);
        filtro.filtra(episodio);
+//*******************************************************************************************
+//       Listando filmes:
+//       1º eu criei um novo filme e coloquei atributos nele
+//       2º com os get e setters da classe titulo eu preenchi com os atributos
+//       3º criei um arrayList que passei <Filme> que é a minha classe
+//4º utilizei o método add para colocar as minhas variáveis meuFilme e filmeDouglas
+//       5º imprimi a mensagem na tela com os atributos e utilizei o método size() que foi usado para "contar" quantos filmes tem
+//       6º o método get foi para pegar a posição dos filmes e o nome com o get
+
+       var filmeDouglas = new Filme();
+       filmeDouglas.setNome("Cisne Negro");
+       filmeDouglas.setDuracaoEmMinutos(200);
+       filmeDouglas.setAnoDeLancamento(2013);
+       filmeDouglas.avalia(10);
+//       ArrayList
+//     oq eu estou querendo listar?
+//               Filmes
+       ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+//       Adicionando Filmes
+       listaDeFilmes.add(filmeDouglas);
+       listaDeFilmes.add(meuFilme);
+       System.out.println("Tamanho da Lista: " + listaDeFilmes.size());
+                                  //    pegou o primeiro filme da lista + nome
+       System.out.println("Primeiro filme: " + listaDeFilmes.get(0).toString());
+//       imprimir a lista de filmes inteira
+//       System.out.println(listaDeFilmes);
+
     }
 }

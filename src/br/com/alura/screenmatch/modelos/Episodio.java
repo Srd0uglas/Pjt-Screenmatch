@@ -3,6 +3,7 @@ package br.com.alura.screenmatch.modelos;
 import calculos.Classificavel;
 
 public class Episodio implements Classificavel {
+//    todo ep tem um nº e um nome
     private int numero;
     private String nome;
     private Serie serie;
@@ -46,9 +47,8 @@ public class Episodio implements Classificavel {
         if(totalDeVisualizacoes > 100){
             return 4;
         }else{
-            return 3;
+            return 2;
         }
-
     }
 }
 

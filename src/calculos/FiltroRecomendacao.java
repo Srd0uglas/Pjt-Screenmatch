@@ -1,7 +1,6 @@
 package calculos;
 
 public class FiltroRecomendacao {
-    private String recomendacao;
 //    método para incluir a classe classificável
 
     public void filtra(Classificavel classificavel){

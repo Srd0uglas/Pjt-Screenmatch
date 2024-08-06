@@ -13,9 +13,17 @@ public class Filme extends Titulo implements Classificavel {
     public void setDiretor(String diretor) {
         this.diretor = diretor;
     }
-
+//    representa a classificação em estrelas
     @Override
     public int getClassificacao() {
+//            casting
         return (int) pegaMedia()/2;
+    }
+
+//    Sobrescrever o toString para mudar o comportamento (todo mundo tem)
+
+    @Override
+    public String toString() {
+        return "Filme: " + this.getNome() + "( "+ this.getAnoDeLancamento() + ")";
     }
 }
