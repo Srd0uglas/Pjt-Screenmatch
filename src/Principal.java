@@ -9,9 +9,8 @@ import java.util.ArrayList;
 public class Principal {
     public static void main(String[] args) {
 //  Instância da Classe br.com.alura.screenmatch.modelos.Filme
-       Filme meuFilme = new Filme();
-       meuFilme.setNome( "As vantagens de ser Invisível");
-       meuFilme.setAnoDeLancamento(2010);
+       Filme meuFilme = new Filme( "As vantagens de ser Invisível",2010);
+//       meuFilme.setAnoDeLancamento(2010);
        meuFilme.setDuracaoEmMinutos(180);
        System.out.println("Duração em Minutos: "+ meuFilme.getDuracaoEmMinutos());
 //     Quando eu chamar o método exibeFichaTecnica ele precisa exibir o que eu determinei
@@ -22,9 +21,7 @@ public class Principal {
        System.out.println("Total de Avaliações: " + meuFilme.getTotalDeAvaliacoes());
        System.out.println(meuFilme.pegaMedia());
 //*******************************************************************************************
-       Serie serie = new Serie();
-       serie.setNome("Lost");
-       serie.setAnoDeLancamento(2018);
+       Serie serie = new Serie("Lost",2018);
        serie.exibeFichaTecnica();
        serie.setTemporadas(10);
        serie.setEpisodiosPorTemporada(10);
@@ -55,10 +52,9 @@ public class Principal {
 //       5º imprimi a mensagem na tela com os atributos e utilizei o método size() que foi usado para "contar" quantos filmes tem
 //       6º o método get foi para pegar a posição dos filmes e o nome com o get
 
-       var filmeDouglas = new Filme();
-       filmeDouglas.setNome("Cisne Negro");
+       var filmeDouglas = new Filme("Cisne Negro",2013);
+//       filmeDouglas.setNome();
        filmeDouglas.setDuracaoEmMinutos(200);
-       filmeDouglas.setAnoDeLancamento(2013);
        filmeDouglas.avalia(10);
 //       ArrayList
 //     oq eu estou querendo listar?
@@ -69,9 +65,9 @@ public class Principal {
        listaDeFilmes.add(meuFilme);
        System.out.println("Tamanho da Lista: " + listaDeFilmes.size());
                                   //    pegou o primeiro filme da lista + nome
-       System.out.println("Primeiro filme: " + listaDeFilmes.get(0).toString());
+       System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
 //       imprimir a lista de filmes inteira
-//       System.out.println(listaDeFilmes);
+       System.out.println(listaDeFilmes);
 
     }
 }

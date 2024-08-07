@@ -1,12 +1,18 @@
 package br.com.alura.screenmatch.modelos;
 //a classe Série vai herdar os atributos da classe titulo e só vamos acrescentar os atributos necessários para a Série
-public class Serie extends Titulo{
+public class Serie extends Titulo {
     private int temporadas;
     private boolean ativa;
     private int episodiosPorTemporada;
     private int minutosPorEpisodio;
 
-//    ALT+INSERT = GET E SETTERS
+
+//    Construtor é para deifinir um atributo como padrão
+    public Serie(String nome, int anoDeLancamento) {
+        super(nome, anoDeLancamento);
+    }
+
+    //    ALT+INSERT = GET E SETTERS
 //    ESSE MÉTODO É PARA RETORNAR O VALOR QUE FOI DEFINIDO NO ATRINUTO
     public int getTemporadas() {
         return temporadas;
