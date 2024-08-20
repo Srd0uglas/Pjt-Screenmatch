@@ -4,7 +4,7 @@ package br.com.alura.screenmatch.modelos;
 //Essa classe é uma herança = atributos em comum
 
 //***ESSA CLASSE É A QUE GUARDA O QUE TODAS AS CLASSES TEM EM COMUM***
-public class Titulo {
+public class Titulo  implements Comparable<Titulo>{
     private String nome;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
@@ -74,4 +74,8 @@ public class Titulo {
     }
 
 
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
+    }
 }
